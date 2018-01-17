@@ -1,2 +1,3 @@
 # compciv-2018-fhallzaz
-Communications Class Repo
+
+Hello World! This is my repo for Computational Methods in the Civic Sphere, Winter 2017-18.
