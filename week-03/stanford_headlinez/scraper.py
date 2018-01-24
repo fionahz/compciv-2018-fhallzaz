@@ -34,15 +34,20 @@ def extract_headline_text(txt):
     split_on_close = txt.split('>')
 
     # Loop through each item in the split string
-    for split_string in split_on_close:
+    #for split_string in split_on_close:
         # If the item is not empty and does not begin with the opening of a tag
-        if split_string != "":
-            if split_string[0] != '<':
-                final_split = split_string.split('<')
-                return final_split[0]
+    #    if split_string != "":
+    #        if split_string[0] != '<':
+    #            final_split = split_string.split('<')
+    #            return final_split[0]
+
+    correct_tag = split_on_close[2]
+    split_ctag = correct_tag.split('<')
+    
+    return split_ctag[0]
 
     # Return value if no 'human-readable' text is found in the line
-    return "Error: Sorry, we couldn't find any human-readable text on that page!"
+    #return "Error: Sorry, we couldn't find any human-readable text on that page!"
 
 
 def parse_headline_tags(txt):
