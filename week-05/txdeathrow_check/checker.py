@@ -32,7 +32,7 @@ def get_and_parse_inmate_rows():
     txt = get_html()
     soup = BeautifulSoup(txt, 'lxml')
     tags = soup.select('tr')
-    return tags
+    return tags[1:]
 
 
 def count_inmates():
