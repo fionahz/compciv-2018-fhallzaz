@@ -112,7 +112,7 @@ def wrangle_inmate_data_from_tag(rowtag):
     cat_array = rowtag.select('td')
     return_dict = {}
     return_dict['tdcj_id'] = cat_array[0].text.strip()
-    return_dict['url'] = make_absolute_url(cat_array[1].text)
+    return_dict['url'] = make_absolute_url(cat_array[1].select('a')[0].attrs['href'])
     return_dict['last_name'] = cat_array[2].text
     return_dict['first_name'] = cat_array[3].text
     return_dict['birthdate'] = txdate_to_iso(cat_array[4].text)
