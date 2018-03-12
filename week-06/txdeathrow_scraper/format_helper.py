@@ -144,6 +144,4 @@ def make_absolute_url(href):
     #### fill in yourself
     #### could be a one-liner with proper use of the urljoin() function...
     from data_helper import DATA_SRC_URL
-    print(href)
-    print("Print working?")
     return urljoin(DATA_SRC_URL, href)
